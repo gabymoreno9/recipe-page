@@ -1,21 +1,77 @@
 <!DOCTYPE html>
 
 <head>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy&display=swap" rel="stylesheet">
+    <style> 
+    body{font-family: helvetica}
+    .directions{
+        padding-right: 20px;
+    }
+    .directions h3{
+        font-family: 'Josefin Sans', sans-serif;
+    }
+    .directions ol{
+        font-family: 'Sorts Mill Goudy', serif;
+    }
+    .content-container { display: flex }
+    .image-and-ingredients{
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-left:20px;
+    }
+    .image-and-ingredients h3{
+        font-family: 'Josefin Sans', sans-serif;
+    }
+    .image-and-ingredients ul{
+        font-family: 'Sorts Mill Goudy', serif;
+    }
+    .title-and-description{
+        text-align: center;
+        color:#f37160;
+        font-family: 'Josefin Sans', sans-serif;
+        padding-bottom: 30px;
+        padding-top: 10px;
+    }
+    .title-and-description h1{
+        text-transform: uppercase;
+        color:#24386F;
+        font-size: 30px;
+    }
+    
+    .title-and-description p{
+        color: black;
+        font-family: 'Sorts Mill Goudy', serif;
+
+    }
+    img{
+        width: 500px;
+        border-radius: 100px;
+    }
+    </style>
+   
 
 </head>
 
 <body>
 <title>Recipe Page</title>
 
+<div class ="title-and-description">
 <h1>Mom's Okay Spaghetti</h1>
 <h2>It's not horrible™️ </h2>
 <p> This is my mom's famous spaghetti. It is not authentic and some might</br>
 argue that it is not "good". But you know what? It's Not Horrible™️. And </br>
 that's on Chef Boyardee. Boy, this stuff is alright.
 </p>
+</div>
+
+<div class="content-container">
+<div class = "image-and-ingredients">
+<img src="https://i2.wp.com/flavorite.net/wp-content/uploads/2015/02/noodle_weenies.jpg">
 </br>
-Here's what you'll need:
-</br>
+<h3>Ingredients:</h3>
 <ul>
     <li>1 Gallon of ketchup</li>
     <li>Hot Dogs</li>
@@ -23,6 +79,32 @@ Here's what you'll need:
     <li>Hot Cheetos</li>
 
 </ul>
+</br>
+</div>
+
+
+<div class ="directions">
+<h3>Directions</h3>
+<ol>
+    <li>First off, invite your friends, Mom's making her Okay Spaghetti after all.</br></li>
+    <ul><li>That means Giovanni, Tony, Mario, Alfredo, get over here, 7pm sharp. </li></ul>
+    <li>Okay so get comfortable</li>
+    <li>Get a nice big pot and fill it with water, boil it over any source of heat</li>
+</ol>
+
+<h3>Making the Spaghetti Sauce</h3>
+<ol><li>It's actually ketchup and store bought is fine</li></ol>
+
+<h3>Directions Part 2: This Time, <em>It's Personal</em></h3>
+<ol>
+    <li>cut your weenies in any shape and stick the solid noodles through the weenie</li>
+    <li>repeat until you've made your desired amount of meat noodles</li>
+    <li>At this point, your water should be boiling, if not boil it again</li>
+    <li>drop the weenie noodles in the pot</li>
+</ol>
+</div>
+</div>
+
 
 </body>
 
