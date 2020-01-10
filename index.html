@@ -3,7 +3,11 @@
 <head>
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" />
+    
     <style> 
+   
     .directions{
         padding-right: 20px;
     }
@@ -15,6 +19,15 @@
     }
     .directions p{
         font-family: 'Sorts Mill Goudy', serif;
+    }
+    .directions a{
+        text-decoration: none;
+        color: black;
+        font-family: 'Sorts Mill Goudy', serif;
+
+    }
+    .directions a:hover{
+        color: #F37060;
     }
     .content-container { display: flex }
     .image-and-ingredients{
@@ -52,75 +65,242 @@
         width: 500px;
         border-radius: 100px;
     }
+
+    .navbar-brand {
+        font-family: 'Josefin Sans', sans-serif;
+        text-transform: uppercase;
+        line-height: 30px;
+    }
+    .navbar-toggle{
+        background-color: #23386F;
+    }
+
+    .navbar .nav {
+     font-family: 'Open Sans', sans-serif;
+     text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 1.2rem
+    }
+
+    .navbar-inverse {
+     background-color: #fff
+    }
+
+    .navbar-inverse .navbar-nav>.active>a:hover,
+    .navbar-inverse .navbar-nav>li>a:hover,
+    .navbar-inverse .navbar-nav>li>a:focus {
+     background-color: #fff
+    }
+
+    .navbar-inverse .navbar-nav>.active>a,
+    .navbar-inverse .navbar-nav>.open>a,
+    .navbar-inverse .navbar-nav>.open>a,
+    .navbar-inverse .navbar-nav>.open>a:hover,
+    .navbar-inverse .navbar-nav>.open>a,
+    .navbar-inverse .navbar-nav>.open>a:hover,
+    .navbar-inverse .navbar-nav>.open>a:focus {
+    background-color: #FA7A53
+    }
+
+    .dropdown-menu {
+    background-color: #24386F
+    }
+
+    .dropdown-menu>li>a:hover,
+    .dropdown-menu>li>a:focus {
+    background-color: #002200
+    }
+
+    .navbar-inverse {
+    background-image: none;
+    }
+
+    .dropdown-menu>li>a:hover,
+    .dropdown-menu>li>a:focus {
+    background-image: none;
+    }
+
+    .navbar-inverse {
+    border-color: #003300
+    }
+
+    .navbar-inverse .navbar-brand {
+    color: #F37060
+    }
+
+    .navbar-inverse .navbar-brand:hover {
+    color: #23386F
+    }
+
+    .navbar-inverse .navbar-nav>li>a {
+    color: #333333
+    }
+
+    .navbar-inverse .navbar-nav>li>a:hover,
+    .navbar-inverse .navbar-nav>li>a:focus {
+    color: #FA7A53
+    }
+
+    .navbar-inverse .navbar-nav>.active>a,
+    .navbar-inverse .navbar-nav>.open>a,
+    .navbar-inverse .navbar-nav>.open>a:hover,
+    .navbar-inverse .navbar-nav>.open>a:focus {
+    color: #fff
+    }
+
+    .navbar-inverse .navbar-nav>.active>a:hover,
+    .navbar-inverse .navbar-nav>.active>a:focus {
+    color: #FA7A53
+    }
+
+    .dropdown-menu>li>a {
+    color: #333333
+    }
+
+    .dropdown-menu>li>a:hover,
+    .dropdown-menu>li>a:focus {
+    color: #FA7A53
+    }
+
+    .navbar-inverse .navbar-nav>.dropdown>a .caret {
+    border-top-color: #333333
+    }
+
+    .navbar-inverse .navbar-nav>.dropdown>a:hover .caret {
+    border-top-color: #333333
+    }
+
+    .navbar-inverse .navbar-nav>.dropdown>a .caret {
+    border-bottom-color: #333333
+    }
+
+    .navbar-inverse .navbar-nav>.dropdown>a:hover .caret {
+    border-bottom-color: #333333
+    }
+   
+    .navbar-fixed-bottom, .navbar-fixed-top{
+        position: relative;
+    }
+
     </style>
    
 
 </head>
 
+
 <body>
 <title>Recipe Page</title>
 
-<div class ="title-and-description">
-<h1>Mom's Okay Spaghetti</h1>
-<h2>It's not horrible™️ </h2>
-<p> This is my mom's famous spaghetti. It is not authentic and some might</br>
-argue that it is not "good". But you know what? It's Not Horrible™️. And </br>
-that's on Chef Boyardee. Boy, this stuff is alright.
-</p>
+<div id ="outercontainer">
+    <header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand">Fancy Eats</a>
+            </div>
+            <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                <a href="#">Home</a>
+                </li>
+                <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Mission</a></li>
+                    <li><a href="#">Vision</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+                </li>
+                <li>
+                <a href="#">Recipes</a>
+                </li>
+                <li>
+                <a href="#">Blog</a>
+                </li>
+                <li class="active">
+                <a href="#">Contact</a>
+                </li>
+            </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class ="title-and-description">
+        <h1>Mom's Okay Spaghetti</h1>
+            <h2>It's not horrible™️ </h2>
+            <p> This is my mom's famous spaghetti. It is not authentic and some might</br>
+            argue that it is not "good". But you know what? It's Not Horrible™️. And </br>
+            that's on Chef Boyardee. Boy, this stuff is alright.
+            </p>
+    </div>
+
+    <div class="content-container">
+        <div class = "image-and-ingredients">
+            <img src="https://i2.wp.com/flavorite.net/wp-content/uploads/2015/02/noodle_weenies.jpg">
+            </br>
+            <h3>Ingredients:</h3>
+            <ul>
+                <li>1 Gallon of ketchup</li>
+                <li>Hot Dogs</li>
+                <li>Noodles (any kind is alright)</li>
+                <li>Hot Cheetos</li>
+
+            </ul>
+            </br>
+        </div>
+
+
+    <div class ="directions">
+        <h3>Directions</h3>
+            <ol>
+                <li>First off, invite your friends, Mom's making her Okay Spaghetti after all.</br></li>
+                <ul><li>That means Giovanni, Tony, Mario, Alfredo, get over here, 7pm sharp. </li></ul>
+                <li>Okay so get comfortable</li>
+                <li>Get a nice big pot and fill it with water, boil it over any source of heat</li>
+            </ol>
+
+        <h3>Making the Spaghetti Sauce</h3>
+            <ol><li>It's actually ketchup and store bought is fine</li></ol>
+
+        <h3>Directions Part 2: This Time, <em>It's Personal</em></h3>
+            <ol>
+                <li>Cut your weenies in any shape and stick the solid noodles through the weenie</li>
+                <li>Repeat until you've made your desired amount of meat noodles</li>
+                <li>At this point, your water should be boiling, if not boil it again</li>
+                <li>Drop the weenie noodles in the pot</li>
+                <li>Crush up the hot cheetos and sprinkle as much as you want on top</li>
+                <li>Put your ketchup sauce on the spaghetti</li>
+                <li>Enjoy responsibly</li>
+            </ol>
+
+        <h3>Mom's Okay Spaghetti In The Media</h3>
+            <p>Check it out </p><iframe width="560" height="315" src="https://www.youtube.com/embed/a2Zf4TgbEDo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        <h3> Actual Spaghetti Recipes You Should Try OUt</h3>
+            <ul>
+                <li><a href="https://www.simplysated.com/spaghetti-pomodoro/">Spaghetti Pomodoro (like as in Pomodoro like that one method of learning lmao</a></li>
+                <li><a href="https://damndelicious.net/2014/03/29/spaghetti-carbonara/">Spaghetti Carbonara</a></li>
+                <li><a href="https://www.foodrepublic.com/recipes/the-4-spaghetti-recipe-that-tastes-almost-as-good-as-the-24-spaghetti-recipe/">The $4 Spaghetti taht apparently tastes like it did not cost $4</a></li>
+            </ul>
+
+
+    </div>
+        
+    </div>
 </div>
 
-<div class="content-container">
-<div class = "image-and-ingredients">
-<img src="https://i2.wp.com/flavorite.net/wp-content/uploads/2015/02/noodle_weenies.jpg">
-</br>
-<h3>Ingredients:</h3>
-<ul>
-    <li>1 Gallon of ketchup</li>
-    <li>Hot Dogs</li>
-    <li>Noodles (any kind is alright)</li>
-    <li>Hot Cheetos</li>
-
-</ul>
-</br>
-</div>
-
-
-<div class ="directions">
-<h3>Directions</h3>
-<ol>
-    <li>First off, invite your friends, Mom's making her Okay Spaghetti after all.</br></li>
-    <ul><li>That means Giovanni, Tony, Mario, Alfredo, get over here, 7pm sharp. </li></ul>
-    <li>Okay so get comfortable</li>
-    <li>Get a nice big pot and fill it with water, boil it over any source of heat</li>
-</ol>
-
-<h3>Making the Spaghetti Sauce</h3>
-<ol><li>It's actually ketchup and store bought is fine</li></ol>
-
-<h3>Directions Part 2: This Time, <em>It's Personal</em></h3>
-<ol>
-    <li>Cut your weenies in any shape and stick the solid noodles through the weenie</li>
-    <li>Repeat until you've made your desired amount of meat noodles</li>
-    <li>At this point, your water should be boiling, if not boil it again</li>
-    <li>Drop the weenie noodles in the pot</li>
-    <li>Crush up the hot cheetos and sprinkle as much as you want on top</li>
-    <li>Put your ketchup sauce on the spaghetti</li>
-    <li>Enjoy responsibly</li>
-</ol>
-
-<h3>Mom's Okay Spaghetti In The Media</h3>
-<p>Check it out </p><iframe width="560" height="315" src="https://www.youtube.com/embed/a2Zf4TgbEDo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
-
-</div>
-</div>
-
-
+<footer></footer>
 </body>
 
-<footer>
-    
-</footer>
 
+
+    
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 </html>
