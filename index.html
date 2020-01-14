@@ -1,189 +1,39 @@
 <!DOCTYPE html>
 
 <head>
+    <!-- Fonts from Google -->
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap scripts here -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" />
+
+    <!-- Fontawesome script for the jquery button at the bottom of the page -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <!-- Viewport which allows for responsiveness -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon which is the image that is at the top of the tab -->
+    <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+
+    <!-- Extenal stylesheet for the CSS -->
+    <link rel="stylesheet" type="text/css" href="recipe.css">
+
+    <!-- Stylesheet for the social media widgets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
-    <style> 
-   
-    .directions{
-        padding-right: 20px;
-    }
-    .directions h3{
-        font-family: 'Josefin Sans', sans-serif;
-    }
-    .directions ol{
-        font-family: 'Sorts Mill Goudy', serif;
-    }
-    .directions p{
-        font-family: 'Sorts Mill Goudy', serif;
-    }
-    .directions a{
-        text-decoration: none;
-        color: black;
-        font-family: 'Sorts Mill Goudy', serif;
-
-    }
-    .directions a:hover{
-        color: #F37060;
-    }
-    .content-container { display: flex }
-    .image-and-ingredients{
-        flex-grow: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-left:20px;
-    }
-    .image-and-ingredients h3{
-        font-family: 'Josefin Sans', sans-serif;
-    }
-    .image-and-ingredients ul{
-        font-family: 'Sorts Mill Goudy', serif;
-    }
-    .title-and-description{
-        text-align: center;
-        color:#f37160;
-        font-family: 'Josefin Sans', sans-serif;
-        padding-bottom: 30px;
-        padding-top: 10px;
-    }
-    .title-and-description h1{
-        text-transform: uppercase;
-        color:#24386F;
-        font-size: 30px;
-    }
-    
-    .title-and-description p{
-        color: black;
-        font-family: 'Sorts Mill Goudy', serif;
-
-    }
-    img{
-        width: 500px;
-        border-radius: 100px;
-    }
-
-    .navbar-brand {
-        font-family: 'Josefin Sans', sans-serif;
-        text-transform: uppercase;
-        line-height: 30px;
-    }
-    .navbar-toggle{
-        background-color: #23386F;
-    }
-
-    .navbar .nav {
-     font-family: 'Open Sans', sans-serif;
-     text-transform: uppercase;
-    letter-spacing: 3px;
-    font-size: 1.2rem
-    }
-
-    .navbar-inverse {
-     background-color: #fff
-    }
-
-    .navbar-inverse .navbar-nav>.active>a:hover,
-    .navbar-inverse .navbar-nav>li>a:hover,
-    .navbar-inverse .navbar-nav>li>a:focus {
-     background-color: #fff
-    }
-
-    .navbar-inverse .navbar-nav>.active>a,
-    .navbar-inverse .navbar-nav>.open>a,
-    .navbar-inverse .navbar-nav>.open>a,
-    .navbar-inverse .navbar-nav>.open>a:hover,
-    .navbar-inverse .navbar-nav>.open>a,
-    .navbar-inverse .navbar-nav>.open>a:hover,
-    .navbar-inverse .navbar-nav>.open>a:focus {
-    background-color: #FA7A53
-    }
-
-    .dropdown-menu {
-    background-color: #24386F
-    }
-
-    .dropdown-menu>li>a:hover,
-    .dropdown-menu>li>a:focus {
-    background-color: #002200
-    }
-
-    .navbar-inverse {
-    background-image: none;
-    }
-
-    .dropdown-menu>li>a:hover,
-    .dropdown-menu>li>a:focus {
-    background-image: none;
-    }
-
-    .navbar-inverse {
-    border-color: #003300
-    }
-
-    .navbar-inverse .navbar-brand {
-    color: #F37060
-    }
-
-    .navbar-inverse .navbar-brand:hover {
-    color: #23386F
-    }
-
-    .navbar-inverse .navbar-nav>li>a {
-    color: #333333
-    }
-
-    .navbar-inverse .navbar-nav>li>a:hover,
-    .navbar-inverse .navbar-nav>li>a:focus {
-    color: #FA7A53
-    }
-
-    .navbar-inverse .navbar-nav>.active>a,
-    .navbar-inverse .navbar-nav>.open>a,
-    .navbar-inverse .navbar-nav>.open>a:hover,
-    .navbar-inverse .navbar-nav>.open>a:focus {
-    color: #fff
-    }
-
-    .navbar-inverse .navbar-nav>.active>a:hover,
-    .navbar-inverse .navbar-nav>.active>a:focus {
-    color: #FA7A53
-    }
-
-    .dropdown-menu>li>a {
-    color: #333333
-    }
-
-    .dropdown-menu>li>a:hover,
-    .dropdown-menu>li>a:focus {
-    color: #FA7A53
-    }
-
-    .navbar-inverse .navbar-nav>.dropdown>a .caret {
-    border-top-color: #333333
-    }
-
-    .navbar-inverse .navbar-nav>.dropdown>a:hover .caret {
-    border-top-color: #333333
-    }
-
-    .navbar-inverse .navbar-nav>.dropdown>a .caret {
-    border-bottom-color: #333333
-    }
-
-    .navbar-inverse .navbar-nav>.dropdown>a:hover .caret {
-    border-bottom-color: #333333
-    }
-   
-    .navbar-fixed-bottom, .navbar-fixed-top{
-        position: relative;
-    }
-
-    </style>
-   
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+        $(document).ready(function(){
+        $("button").click(function(){
+            $("#div1").fadeIn();
+            $("#div2").fadeIn("slow");
+            $("#div3").fadeIn(3000);
+        });
+        });
+        </script> -->
 
 </head>
 
@@ -191,7 +41,10 @@
 <body>
 <title>Recipe Page</title>
 
+<!-- The script for the button -->
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 <div id ="outercontainer">
+
     <header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
         <div class="container">
             <div class="navbar-header">
@@ -211,9 +64,9 @@
                 <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                    <li><a href="#">Mission</a></li>
-                    <li><a href="#">Vision</a></li>
-                    <li><a href="#">Careers</a></li>
+                    <li><a href="https://www.google.com">Mission</a></li>
+                    <li><a href="https://www.google.com">Vision</a></li>
+                    <li><a href="https://www.google.com">Careers</a></li>
                 </ul>
                 </li>
                 <li>
@@ -279,28 +132,59 @@
             </ol>
 
         <h3>Mom's Okay Spaghetti In The Media</h3>
-            <p>Check it out </p><iframe width="560" height="315" src="https://www.youtube.com/embed/a2Zf4TgbEDo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p>Check it out </p>
+            <iframe width="500" height="315" src="https://www.youtube.com/embed/a2Zf4TgbEDo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-        <h3> Actual Spaghetti Recipes You Should Try OUt</h3>
+        <h3> Actual Spaghetti Recipes You Should Try Out</h3>
             <ul>
-                <li><a href="https://www.simplysated.com/spaghetti-pomodoro/">Spaghetti Pomodoro (like as in Pomodoro like that one method of learning lmao</a></li>
+                <li><a href="https://www.simplysated.com/spaghetti-pomodoro/">Spaghetti Pomodoro (like as in Pomodoro like that one time management technique) lmao</a></li>
                 <li><a href="https://damndelicious.net/2014/03/29/spaghetti-carbonara/">Spaghetti Carbonara</a></li>
-                <li><a href="https://www.foodrepublic.com/recipes/the-4-spaghetti-recipe-that-tastes-almost-as-good-as-the-24-spaghetti-recipe/">The $4 Spaghetti taht apparently tastes like it did not cost $4</a></li>
+                <li><a href="https://www.foodrepublic.com/recipes/the-4-spaghetti-recipe-that-tastes-almost-as-good-as-the-24-spaghetti-recipe/">The $4 Spaghetti that apparently tastes like it did not cost $4</a></li>
             </ul>
 
 
     </div>
+
+
         
     </div>
-</div>
+    <footer>
+            <div class="socials"> 
+                <!-- Add font awesome icons -->
+                <a href="https://www.facebook.com" class="fa fa-facebook"></a>
+                <a href="https://www.twitter.com" class="fa fa-twitter"></a>
+                <a href="https://www.linkedin.com" class="fa fa-linkedin"></a>
+            </div>
 
-<footer></footer>
-</body>
+            <p> Copyright 2020 | Contact Me | Privacy Policy</p>
+            
+            <div class ="logo"> Fancy Eats</div>
+    </footer>
 
 
-
+    <script>
+        //Get the button
+        var mybutton = document.getElementById("myBtn");
+        
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+        
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+    </script>
     
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
 </html>
